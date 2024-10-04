@@ -1,0 +1,148 @@
+<app-nav-bar></app-nav-bar>
+<div class="container dashboard font-type">
+  <div class="row">
+    <!-- Colonna per i dettagli utente -->
+    <div class="col-md-4 user-detail">
+      <p class="page-title mb-5">Il mio Profilo</p>
+      <div class="user-info">
+        <p>
+          <strong>Nome:</strong>
+          {{ currentUser.firstName }}
+        </p>
+        <p>
+          <strong>Cognome:</strong>
+          {{ currentUser.lastName }}
+        </p>
+        <p>
+          <strong>Email:</strong>
+          {{ this.email }}
+        </p>
+        <p>
+          <strong>IBAN:</strong>
+          {{ currentUser.iban }}
+        </p>
+        <p>
+          <strong>Data Apertura Conto:</strong>
+          {{ currentUser.openDate | date : "dd/MM/yyyy" }}
+        </p>
+      </div>
+
+      <!-- Pulsante per aprire il modale -->
+      <button
+        class="btn btn-warning mt-3 password-button font-type px-4"
+        (click)="openChangePasswordModal(modalContent)"
+      >
+        Modifica password
+      </button>
+    </div>
+
+    <!-- Colonna per l'immagine a destra -->
+    <div class="col-md-5 d-flex justify-content-end align-items-center">
+      <img src="../../../assets/profile-icon.png" class="img-fluid d-none d-md-block" alt="Transfer Illustration" />
+    </div>
+  </div>
+</div>
+<!-- Modale per il cambio password -->
+<ng-template #modalContent>
+  <div class="modal-header border-0 font-type mx-2">
+    <h4 class="modal-title title mt-3 font-type" id="changePasswordModalLabel">Modifica Password</h4>
+    <button type="button" class="btn-close" aria-label="Chiudi" (click)="closeModal()"></button>
+  </div>
+  <div class="modal-body font-type mx-3">
+    <form [formGroup]="passwordForm!">
+      <div class="mb-3 position-relative">
+        <label for="confirm-password" class="form-label">Inserisci la password</label>
+        <input
+          type="password"
+          formControlName="newPassword"
+          class="form-control"
+          id="newPassword"
+          placeholder="Inserisci la password"
+          required
+        />
+        <div class="eye-icon" (click)="togglePasswordVisibility('newPassword')">
+          <app-eyes-icon [size]="'25px'" (state)="(isPasswordVisible)"></app-eyes-icon>
+        </div>
+      </div>
+      <div class="mb-3 position-relative">
+        <label for="confirmPassword" class="form-label">Conferma Nuova Password</label>
+        <input
+          type="password"
+          formControlName="confirmPassword"
+          class="form-control"
+          id="confirmPassword"
+          placeh
+          older="Conferma la nuova password"
+        />
+        <div class="eye-icon" (click)="togglePasswordVisibility('confirmPassword')">
+          <app-eyes-icon [size]="'25px'" (state)="(isPasswordVisible)"></app-eyes-icon>
+        </div>
+      </div>
+    </form>
+    <div *ngIf="passwordAlert" class="alert alert-danger alert-dismissible fade show" role="alert">  
+      La password deve contenere almeno un carattere maiuscolo, uno minuscolo, un numero e un carattere speciale!
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Chiudi"
+        (click)="closeAlert()"
+      ></button>
+    </div>
+    <div *ngIf="eightAlert" class="alert alert-danger alert-dismissible fade show" role="alert">  
+      La password deve avere almeno 8 caratteri!
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Chiudi"
+        (click)="closeAlert()"
+      ></button>
+    </div>
+    <div *ngIf="touchAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+      Inserisci tutti i campi!
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Chiudi"
+        (click)="closeAlert()"
+      ></button>
+    </div>
+    <div *ngIf="showAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+      Le password non corrispondono!
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Chiudi"
+        (click)="closeAlert()"
+      ></button>
+    </div>
+    <div *ngIf="showSuccess" class="alert alert-success alert-dismissible fade show" role="alert">
+      Password modificata con successo! Reindirizzamento alla pagina di login...
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Chiudi"
+        (click)="closeAlert()"
+      ></button>
+    </div>
+  </div>
+  <div class="modal-footer border-0">
+    <button
+      type="button"
+      class="btn btn-warning color-white shadow-sm mx-3 mb-2 font-type"
+      (click)="submitChangePassword()"
+    >
+      Salva
+    </button>
+  </div>
+</ng-template>
+
+<div>
+  <a href="/dashboard">
+    <img src="../../../assets/HomeIcon.svg" class="img-fluid home-icon right-img d-none d-md-block" alt="home-icon" />
+  </a>
+</div>

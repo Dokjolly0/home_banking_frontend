@@ -1,0 +1,87 @@
+.font-type {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: large;
+}
+
+.title{
+  font-size: xxx-large;
+  margin-top: 15%;
+  margin-left: 2.5%;
+}
+
+.form-recharge {
+  transform: translateY(-10%);
+}
+ 
+
+.container-phone {
+  position: relative;
+  top: 10px;
+}
+
+.custom-container {
+  margin-top: 50px;
+}
+
+.phone-icon {
+  width: 480px;
+  height: auto;
+}
+
+.balance {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+
+}
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+app-success-popup {
+  width: 100vw;
+  height: auto;
+}
+
+
+div .home-icon {
+  background-color: #ec9552;
+  border-radius: 30%;
+  box-shadow: 0 2px 2px rgb(209, 203, 203) !important;
+}
+
+.home-icon {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  padding: 15px;
+  width: 55px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .balance {
+    display: none;
+  }
+}
+
+.btn-warning {
+  background-color: #ec9552;
+  color: white;
+  box-shadow: 0 2px 2px rgb(209, 203, 203) !important;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #c9702c;
+}
+
+div .home-icon:hover{
+  background-color: #c9702c;
+}

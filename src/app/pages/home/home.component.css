@@ -1,0 +1,112 @@
+.font-type {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: larger !important;
+}
+
+.header .title {
+  font-size: 3em !important;
+  color: #EC9552;
+  margin-top: 20%;
+  font-weight: 300 !important;
+}
+
+.title {
+  font-size: 2.5em  !important;
+  color: #EC9552;
+  margin-top: 20%;
+  font-weight: 300;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #4c4c4c;
+}
+
+.container {
+  text-align: center;
+}
+
+
+.header {
+  position: relative;
+  bottom: 200px;
+}
+
+.header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  line-height: normal;
+}
+
+.brand {
+  color: #EC9552;
+  font-size: xx-large !important;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  position: relative;
+}
+
+.left-section {
+  flex: 1;
+  margin-right: 20%;
+  position: relative;
+  top: -60px;
+  
+}
+
+.right-section {
+  flex: 1;
+  margin-left: 20%;
+  position: relative;
+  top: -60px;
+}
+
+
+.left-section,
+.right-section {
+  flex: 1;
+}
+
+.left-section p,
+.right-section p {
+   margin-bottom: 5%;
+}
+
+.btn-warning {
+  background-color: #ec9552;
+  color: white;
+  border: none;
+  box-shadow: 0 2px 2px rgb(209, 203, 203) !important;
+  width: 40%;
+}
+
+.btn-warning:hover {
+  background-color: #c9702c;
+}
+
+
+.image-section img {
+  position: absolute;
+  bottom: 0;
+  left: 28%;
+  width: 40%;
+  max-width: 100%;
+  height: auto;
+}

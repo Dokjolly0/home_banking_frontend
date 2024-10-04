@@ -1,0 +1,142 @@
+.dashboard {
+  margin-top: 70px;
+}
+
+.font-type {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: large;
+}
+
+.page-title {
+  font-size: 3rem;
+  margin-bottom: 6%;
+}
+
+.title {
+  font-size: xx-large;
+  margin-bottom: 0%;
+  margin-left: 1%;
+}
+
+.user-detail {
+  padding: 20px;
+  margin-right: 20%;
+  margin-top: 5%;
+  margin-left: 3%;
+}
+
+.user-info {
+  margin-bottom: 20px;
+  border-left: 1px solid #ec9552;
+  padding-left: 10px;
+}
+
+.user-info p {
+  margin: 4px;
+  padding: 5px 0;
+  border-bottom: 1px solid #ec9552;
+}
+
+.user-info p:last-child {
+  border-bottom: none;
+}
+
+.password-button {
+  background-color: EC9552;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.close-change-password-form {
+  color: white !important;
+}
+
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+div .home-icon {
+  background-color: #ec9552;
+  border-radius: 30%;
+  box-shadow: 0 2px 2px rgb(209, 203, 203) !important;
+}
+
+.home-icon {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  padding: 15px;
+  width: 55px;
+  height: auto;
+}
+
+.chart-section,
+.spese-section {
+  margin-top: 20px;
+}
+
+div .home-icon {
+  background-color: #ec9552;
+  border-radius: 30%;
+  box-shadow: 0 2px 2px rgb(209, 203, 203) !important;
+}
+
+.home-icon {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  width: 45px;
+  height: auto;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.eye-icon app-eyes-icon {
+  font-size: 1.2rem;
+}
+
+.btn-warning {
+  background-color: #ec9552;
+  color: white;
+  border: none;
+  font-size: medium;
+  max-width: fit-content;
+  margin-left: 30%;
+  box-shadow: 0 2px 2px rgb(209, 203, 203);
+  margin-right: auto;
+}
+
+.btn-warning:hover {
+  background-color: #c9702c;
+}
+
+div .home-icon:hover {
+  background-color: #c9702c;
+}
+
+.color-white {
+  color: white !important;
+}

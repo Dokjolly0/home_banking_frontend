@@ -1,0 +1,76 @@
+<div class="container-fluid body">
+  <div class="row w-100">
+    <!-- Left Column: Login Form -->
+    <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center login-container">
+      <div class="login-form w-100 p-3">
+        <h2 class="text-center mb-4">
+          <span class="h2 actual">Login</span>
+          <span class="separate">|</span>
+          <span class="h2" (click)="navigate('register')">Registrati</span>
+        </h2>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div
+            class="mb-3 position-relative"
+            [ngClass]="{ 'has-error': loginForm.get('username')?.invalid && loginForm.get('username')?.touched }"
+          >
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              formControlName="username"
+              placeholder="Inserisci qui la tua mail"
+            />
+            <!-- Username Error -->
+            <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched" class="text-danger">
+              <small *ngIf="loginForm.get('username')?.errors?.['required']">L'email è obbligatoria</small>
+              <small *ngIf="loginForm.get('username')?.errors?.['email']">Inserisci un'email valida</small>
+            </div>
+          </div>
+
+          <div
+            class="mb-3 position-relative"
+            [ngClass]="{ 'has-error': loginForm.get('password')?.invalid && loginForm.get('password')?.touched }"
+          >
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              formControlName="password"
+              placeholder="Inserisci qui la tua password"
+            />
+            <div class="eye-icon" (click)="togglePasswordVisibility('password')">
+              <app-eyes-icon
+                [size]="'25px'"
+                [ngClass]="{ show: isPasswordVisible, hide: !isPasswordVisible }"
+              ></app-eyes-icon>
+            </div>
+            <!-- Password Error -->
+            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-danger">
+              <small *ngIf="loginForm.get('password')?.errors?.['required']">La password è obbligatoria.</small>
+            </div>
+          </div>
+
+          <div class="d-grid">
+            <button type="submit" id="btn-submit" class="btn btn-primary" [disabled]="loginForm.invalid">
+              Continua
+            </button>
+          </div>
+        </form>
+
+        <!-- Global Error Message -->
+        <div *ngIf="errorMessage" class="text-danger mt-3">{{ errorMessage }}</div>
+        <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched" class="text-danger">
+          <small *ngIf="loginForm.get('username')?.errors?.['required']">L'email è obbligatoria.</small>
+          <small *ngIf="loginForm.get('username')?.errors?.['email']">Inserisci un'email valida.</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Image -->
+    <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center illustration">
+      <img src="../../../assets/loginImage.png" id="img-login" class="img-fluid" alt="Illustration" />
+    </div>
+  </div>
+</div>

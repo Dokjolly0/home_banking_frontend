@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+.font-type {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: large;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.description {
+  margin-left: 0.5%;
+}
+
+.row {
+  margin-top: 10%;
+}
+
+form input,
+form select {
+  background-color: #f8fafc;
+  width: 90%;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+form input:first-child {
+  margin-top: 10px;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+form button {
+  background-color: #ec9552;
+  width: 30%;
+  margin-left: 70%;
+  color: #fff;
+  font-weight: normal;
+  padding: 4px;
+}
+
+form button:hover {
+  background-color: #c06c2d;
+} 
+
+.right-img {
+  margin-top: -22%;
+  width: 110%;
+  max-width: 110%;
+  height: auto;
+  margin-left: 30%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 15px;
+  background-color: #f8f9fa;
+}
+
+.btn-warning {
+  background-color: #ec9552;
+  color: white;
+  border: none;
+  box-shadow: 0 2px 2px rgb(209, 203, 203) !important;
+  
+}
+
+.btn-warning:hover {
+  background-color: #c9702c;
+}
+
+.d-flex {
+  justify-content: space-between;
+}
+
+.error.list {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.btn {
+  flex: 1;
+  margin: 0 5px;
+}
+
+div .home-icon {
+  background-color: #ec9552;
+  border-radius: 30%;
+  box-shadow: 0 2px 2px rgb(209, 203, 203) !important;
+}
+
+.home-icon {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  padding: 15px;
+  width: 55px;
+  height: auto;
+}
+
+div .home-icon:hover{
+  background-color: #c9702c;
+}
+
+#btn-check {
+  transform: translateX(-135%);
+}
+
+.btn-md {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .img-fluid {
+    display: none;
+  }
+}

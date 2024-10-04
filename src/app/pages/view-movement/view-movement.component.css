@@ -1,0 +1,111 @@
+.font-type {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: large;
+}
+
+.title {
+  font-size: xxx-large;
+}
+
+.custom-h1 {
+  font-size: 36px;
+}
+
+.btn {
+  border: none;
+}
+
+.btn:focus {
+  background-color: #ef600d !important;
+}
+
+.table {
+  width: 100%;
+  border: 1px solid transparent;
+  border-collapse: separate;
+    border-spacing: 1em 2px;
+}
+
+.table-position {
+  position: relative;
+  top: 30px;
+}
+
+.no-moovement {
+  position: relative;
+  top: 240px;
+  left: 200px;
+  font-size: 50px;
+}
+
+.filter {
+  position: relative;
+  margin-top: 15%;
+}
+
+.form-filter {
+  position: sticky;
+  top: 20px;
+}
+
+.bg-filter {
+  background: #ffe1a1;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: xx-large;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  text-align: left;
+}
+
+.max-height {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+th {
+  background: rgba(255, 196, 68, 0.5);
+}
+
+button.btn {
+  background-color: #ffa500;
+  color: white;
+}
+
+div .home-icon {
+  background-color: #ec9552;
+  border-radius: 30%;
+}
+
+.home-icon {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  padding: 15px;
+  width: 55px;
+  height: auto;
+  box-shadow: 0 2px 2px rgb(209, 203, 203) !important
+}
+
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+.form-control {
+  border: 1px solid transparent;
+}
+
+div .home-icon:hover{
+  background-color: #c9702c;
+}
+
+button.btn:hover{
+  background-color: #c9702c;  
+}

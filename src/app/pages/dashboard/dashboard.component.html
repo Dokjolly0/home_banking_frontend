@@ -1,0 +1,43 @@
+<div class="body">
+  <div class="container-fluid p-0">
+    <!-- Navbar -->
+    <app-nav-bar></app-nav-bar>
+    <app-loading [isLoading]="loading"></app-loading>
+    <div class="container-fluid main">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mb-4">
+          <!-- Welcome Message and Balance -->
+          <div class="mt-4">
+            <h2 class="welcome-message font-type">
+              Ciao
+              <strong>{{ currentUser?.fullName ?? "Utente sconosciuto" }}</strong>
+              <span>,</span>
+              <br />
+              il saldo del tuo conto è di:
+            </h2>
+
+            <span class="total-amount font-type" id="balance">
+              {{ eyeState ? (balance | currency : "EUR" : "symbol" : "1.2-2") : "-" }}
+            </span>
+            <span class="eye-icon">
+              <app-eyes-icon (state)="(eyeState)" id="eyes" (click)="toggleHyde()"></app-eyes-icon>
+            </span>
+          </div>
+          <!-- Movement Table -->
+          <br />
+          <h3 class="font-type last-movements">Ultimi 5 movimenti:</h3>
+          <app-movement-table></app-movement-table>
+        </div>
+
+        <!-- Image Section -->
+        <div class="col-lg-4 col-md-11 d-flex justify-content-center align-items-center mb-4">
+          <img
+            src="../../../assets/DashboardImg1.jpg"
+            class="img-fluid right-img d-none d-md-block"
+            alt="Img dashboard"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
